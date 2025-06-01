@@ -175,6 +175,7 @@ main{
     }
 }
 
+
 .warning{
     background: var(--color-danger);
     color: var(--always-white);
