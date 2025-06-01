@@ -4,7 +4,7 @@ function addItem(){
     const itemName = document.querySelector("#item").value
 
     if (itemName === "")
-        alert("Diite um item válido")
+        alert("Digite um item válido")
         return
     }
     
@@ -32,7 +32,7 @@ function showItemsList() {
             <div class="item">
                 <div>
                     <input type="checkbox" name="list" id="item-${index}" ${item.checked === true ? "checked" : ""}>
-                    <div class="custom-checkbox">
+                    <div class="custom-checkbox" onclick="checkItem('${item.name}')">
                         <img src="./assets/checked.svg" alt="checked">
                     </div>
                     <label for="item-${index}">${item.name}</label>
