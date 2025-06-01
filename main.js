@@ -3,6 +3,10 @@ const items = []
 function addItem(){
     const itemName = document.querySelector("#item").value
 
+    if (itemName === "")
+        alert("Diite um item válido")
+        return
+    }
     
     const item = {
         name: itemName,
@@ -14,7 +18,7 @@ function addItem(){
     document.querySelector("#item").value = ""
     
         showItemsList()
-}
+
 
 function showItemsList() {
     const sectionList = document.querySelector(".list")
